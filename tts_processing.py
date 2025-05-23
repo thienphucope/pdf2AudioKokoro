@@ -8,7 +8,7 @@ import warnings
 from huggingface_hub import login  # Add this import
 
 # Retrieve Hugging Face token from environment variable and log in
-HF_TOKEN = "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"
+HF_TOKEN = os.environ.get("HF_TOKEN")
 if not HF_TOKEN:
     raise ValueError("HF_TOKEN environment variable not set. Please set it with your Hugging Face token.")
 print(f"DEBUG: HF_TOKEN = {HF_TOKEN}")
